@@ -16,7 +16,7 @@ class projectile(object):
         self.x = 35
         self.y = 395
         self.radius = 10
-        self.color = (175, 175, 175)
+        self.color = (247, 112, 79)
         self.vel_x = vel_x
         self.vel_y = vel_y
 
@@ -129,9 +129,9 @@ score = 0
 def redrawGameWindow():
 
     pygame.draw.rect(window, (255, 255, 255), (0, 0, 500, 500))
-    pygame.draw.rect(window, (0, 96, 255), (0, 0, 500, 420))
+    pygame.draw.rect(window, (0, 185, 255), (0, 0, 500, 420))
     pygame.draw.rect(window, (75, 139, 59), (0, 420, 500, 80))
-    pygame.draw.rect(window, (255, 0, 0), (20, 410, 15, 15))
+    pygame.draw.rect(window, (175, 175, 175), (20, 410, 15, 15))
     rock.draw(window)
     pc.draw(window)
     ac.draw(window)
@@ -140,9 +140,9 @@ def redrawGameWindow():
     score_text = font1.render('Score: ' + str(score), 1, (0, 0, 0))
     window.blit(score_text, (400, 20))
     power_keys_text = font1.render('UP and DOWN Arrow Keys', 1, (0, 0, 0))
-    window.blit(power_keys_text, (400, 20))
+    window.blit(power_keys_text, (155, 30))
     angle_keys_text = font1.render('LEFT and RIGHT Arrow Keys', 1, (0, 0, 0))
-    window.blit(angle_keys_text, (400, 20))
+    window.blit(angle_keys_text, (155, 115))
     pygame.display.update()
 
 
